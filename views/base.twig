@@ -1,0 +1,43 @@
+{% block html_head_container %}
+    <!doctype html>
+    <html>
+        <head>
+            <meta charset="{{site.charset}}" />
+            <title>
+                {% if wp_title %}
+                    {{ wp_title }} - {{ site.name }}
+                {% else %}
+                    {{ site.name }}
+                {% endif %}
+            </title>
+            <meta name="description" content="{{site.description}}">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            {{function('wp_head')}}
+        </head>
+{% endblock %}
+
+<body data-template="base.twig">
+<header>
+    {% block header %}
+        {% include 'header.twig' %}
+    {% endblock %}
+</header>
+
+<section role="main">
+    {% if title %}<h1>{{title}}</h1>{% endif %}
+    <div>
+        {% block content %}
+            Pas de contenue
+        {% endblock %}
+    </div>
+</section>
+
+{% block footer %}
+    <footer>
+        {% include 'footer.twig' %}
+    </footer>
+{% endblock %}
+</body>
+</html>

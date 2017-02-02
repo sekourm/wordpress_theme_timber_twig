@@ -1,0 +1,5 @@
+@import 'simple/home';
+
+@media screen and (max-width: 992px) {
+  @import 'mobile/home';
+}

@@ -1,0 +1,11 @@
+/* line 1, ../src/simple/home.scss */
+body {
+  background-color: lightgrey;
+}
+
+@media screen and (max-width: 992px) {
+  /* line 1, ../src/mobile/home.scss */
+  body {
+    background-color: lightslategrey;
+  }
+}

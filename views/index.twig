@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% for post in posts %}
+
+        {% for post in posts %}
+            {% include ['article-'~post.post_type~'.twig'] %}
+        {% endfor %}
+
+
+	{% endfor %}
+{% endblock %}
